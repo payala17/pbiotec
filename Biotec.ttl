@@ -1,0 +1,646 @@
+@prefix : <http://www.semanticweb.org/pablo/ontologies/2023/4/Biotec#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/pablo/ontologies/2023/4/Biotec> .
+
+<http://www.semanticweb.org/pablo/ontologies/2023/4/Biotec> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasCost
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasCost> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> ;
+                                                          rdfs:range <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Costos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasCurrency
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasCurrency> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/hasCost> ;
+                                                              rdf:type owl:TransitiveProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasDate
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasDate> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/hasCost> ;
+                                                          rdf:type owl:TransitiveProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasInput
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasInput> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Procesos> ,
+                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> ;
+                                                           rdfs:range <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasLocation
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasLocation> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Cadena_Suministro> ,
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> ;
+                                                              rdfs:range <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Ubicacion> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> ;
+                                                              rdfs:range <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasQuality
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasQuality> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> ;
+                                                             rdfs:range <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Calidad> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasSupplier
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasSupplier> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> ;
+                                                              rdfs:range <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Cadena_Suministro> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/hasValue
+<http://www.co-ode.org/ontologies/ont.owl/biotec/hasValue> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/hasCost> ;
+                                                           rdf:type owl:TransitiveProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/baseSubstance
+<http://www.co-ode.org/ontologies/ont.owl/biotec/baseSubstance> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/countCanales
+<http://www.co-ode.org/ontologies/ont.owl/biotec/countCanales> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/date
+<http://www.co-ode.org/ontologies/ont.owl/biotec/date> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/date_price
+<http://www.co-ode.org/ontologies/ont.owl/biotec/date_price> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/date> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/description
+<http://www.co-ode.org/ontologies/ont.owl/biotec/description> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/descriptionInput
+<http://www.co-ode.org/ontologies/ont.owl/biotec/descriptionInput> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/description> ;
+                                                                   rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> ;
+                                                                   rdfs:range xsd:string .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/moneda
+<http://www.co-ode.org/ontologies/ont.owl/biotec/moneda> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Costos> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> ;
+                                                         rdfs:range xsd:string .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/name
+<http://www.co-ode.org/ontologies/ont.owl/biotec/name> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/nameBusiness
+<http://www.co-ode.org/ontologies/ont.owl/biotec/nameBusiness> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/name> ;
+                                                               rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> ;
+                                                               rdfs:range xsd:string .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/nameCountry
+<http://www.co-ode.org/ontologies/ont.owl/biotec/nameCountry> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/name> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/nameInput
+<http://www.co-ode.org/ontologies/ont.owl/biotec/nameInput> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/name> ;
+                                                            rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> ;
+                                                            rdfs:range xsd:string .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/nameProduct
+<http://www.co-ode.org/ontologies/ont.owl/biotec/nameProduct> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/name> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/nameProvince
+<http://www.co-ode.org/ontologies/ont.owl/biotec/nameProvince> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/nameCountry> ;
+                                                               rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Ubicacion> ;
+                                                               rdfs:range xsd:string .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/price
+<http://www.co-ode.org/ontologies/ont.owl/biotec/price> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Costos> ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> ;
+                                                        rdfs:range xsd:float .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/value_price
+<http://www.co-ode.org/ontologies/ont.owl/biotec/value_price> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/price> ;
+                                                              rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> ,
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Costos> ,
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> ;
+                                                              rdfs:range xsd:float .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/webSource
+<http://www.co-ode.org/ontologies/ont.owl/biotec/webSource> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> ,
+                                                                        <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> ;
+                                                            rdfs:range xsd:anyURI .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/year
+<http://www.co-ode.org/ontologies/ont.owl/biotec/year> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/date> ;
+                                                       rdfs:range xsd:int .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/yearCreation
+<http://www.co-ode.org/ontologies/ont.owl/biotec/yearCreation> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl/biotec/year> ;
+                                                               rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Bst_DNA_Polymerase
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Bst_DNA_Polymerase> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/polimerasa_ADN> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Eppendorf
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Eppendorf> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/consumibles> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/M-MLV_Reverse_Transcriptase
+<http://www.co-ode.org/ontologies/ont.owl/biotec/M-MLV_Reverse_Transcriptase> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/polimerasa_ADN> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/PCR
+<http://www.co-ode.org/ontologies/ont.owl/biotec/PCR> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/Tecnicas_de_laboratorio> ;
+                                                      rdfs:comment "La reacción en cadena de la polimerasa (PCR) es  una técnica relativamente simple y ampliamente utilizada en el campo de la biología molecular para amplificar y detectar secuencias de DNA y RNA. Comparada con los métodos tradicionales de amplificación y clonación de DNA, los cuales a menudo toman días, la PCR requiere solo unas pocas horas. La PCR es altamente sensible y requiere una plantilla mínima para la detección y amplificación de secuencias específicas. Lo métodos básicos de PCR han tenido grandes avances y hoy en día se puede hacer mucho más que simplemente amplificar fragmentos de DNA o RNA." .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/RT-PCR
+<http://www.co-ode.org/ontologies/ont.owl/biotec/RT-PCR> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/PCR> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/RT-QPCR
+<http://www.co-ode.org/ontologies/ont.owl/biotec/RT-QPCR> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/PCR> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Recombinase_Polymerase_Amplification_-_RPA
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Recombinase_Polymerase_Amplification_-_RPA> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/polimerasa_ADN> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/SYBR_Green
+<http://www.co-ode.org/ontologies/ont.owl/biotec/SYBR_Green> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/TRI_Reagent
+<http://www.co-ode.org/ontologies/ont.owl/biotec/TRI_Reagent> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/reactivos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Taq_ADN_Polymerase
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Taq_ADN_Polymerase> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/polimerasa_ADN> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Tecnicas
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Tecnicas> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Procesos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Tecnicas_de_laboratorio
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Tecnicas_de_laboratorio> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/Tecnicas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_Nilo
+<http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_Nilo> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_bromofenol
+<http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_bromofenol> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/indicador_de_PH> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_metileno
+<http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_metileno> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/cabina_para_PCR
+<http://www.co-ode.org/ontologies/ont.owl/biotec/cabina_para_PCR> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/equipos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos
+<http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/consumibles> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_sinteticos
+<http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_sinteticos> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/consumibles> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/consumibles
+<http://www.co-ode.org/ontologies/ont.owl/biotec/consumibles> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/dNTPs
+<http://www.co-ode.org/ontologies/ont.owl/biotec/dNTPs> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/equipamiento
+<http://www.co-ode.org/ontologies/ont.owl/biotec/equipamiento> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/equipos
+<http://www.co-ode.org/ontologies/ont.owl/biotec/equipos> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/equipamiento> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/indicador_de_PH
+<http://www.co-ode.org/ontologies/ont.owl/biotec/indicador_de_PH> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/instrumental
+<http://www.co-ode.org/ontologies/ont.owl/biotec/instrumental> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/equipamiento> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/kit_diagnostico
+<http://www.co-ode.org/ontologies/ont.owl/biotec/kit_diagnostico> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/magnesio
+<http://www.co-ode.org/ontologies/ont.owl/biotec/magnesio> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/micropipetas
+<http://www.co-ode.org/ontologies/ont.owl/biotec/micropipetas> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/instrumental> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/oligonucleótidos
+<http://www.co-ode.org/ontologies/ont.owl/biotec/oligonucleótidos> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/polimerasa_ADN
+<http://www.co-ode.org/ontologies/ont.owl/biotec/polimerasa_ADN> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_orgánicos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/reactivos
+<http://www.co-ode.org/ontologies/ont.owl/biotec/reactivos> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/compuestos_sinteticos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR
+<http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/equipos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/rojo_de_fenol
+<http://www.co-ode.org/ontologies/ont.owl/biotec/rojo_de_fenol> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/indicador_de_PH> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/termoincubadora
+<http://www.co-ode.org/ontologies/ont.owl/biotec/termoincubadora> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/equipos> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/tips_de_plastico
+<http://www.co-ode.org/ontologies/ont.owl/biotec/tips_de_plastico> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl/biotec/consumibles> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Procesos
+<http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Procesos> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos
+<http://www.co-ode.org/ontologies/ont.owl/biotechManagment/Productos> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Cadena_Suministro
+<http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Cadena_Suministro> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Calidad
+<http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Calidad> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas
+<http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Ubicacion
+<http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Ubicacion> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Costos
+<http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Costos> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos
+<http://www.co-ode.org/ontologies/ont.owl/biotechPrice/Insumos> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Argenomics
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Argenomics> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Avantor
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Avantor> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Bio-Rad
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Bio-Rad> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotec/SYBR_Green> ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR> ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Biocom
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Biocom> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> ;
+                                                                    owl:someValuesFrom <http://www.co-ode.org/ontologies/ont.owl/biotec/dNTPs>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> ;
+                                                                    owl:someValuesFrom <http://www.co-ode.org/ontologies/ont.owl/biotec/oligonucleótidos>
+                                                                  ] .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Biodynamics
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Biodynamics> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> ;
+                                                              <http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> <http://www.co-ode.org/ontologies/ont.owl/biotec/Mic_qPCR_Thermal_Cycler> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Biomol
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Biomol> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> ;
+                                                                    owl:someValuesFrom <http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR>
+                                                                  ] .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Biopack
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Biopack> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Deltalab
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Deltalab> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotec/magnesio> ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Eppendorf
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Eppendorf> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/Eppendorf> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/cabina_para_PCR> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/micropipetas> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/termoincubadora> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/tips_de_plastico> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Esco
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Esco> rdf:type owl:NamedIndividual ,
+                                                                <http://www.co-ode.org/ontologies/ont.owl/biotec/cabina_para_PCR> ,
+                                                                <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Farmalab
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Farmalab> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotec/magnesio> ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Gilson
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Gilson> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.co-ode.org/ontologies/ont.owl/biotec/micropipetas> ,
+                                                                  <http://www.co-ode.org/ontologies/ont.owl/biotec/tips_de_plastico> ,
+                                                                  <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/INBIOhighTech
+<http://www.co-ode.org/ontologies/ont.owl/biotec/INBIOhighTech> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/Bst_DNA_Polymerase> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/M-MLV_Reverse_Transcriptase> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/Recombinase_Polymerase_Amplification_-_RPA> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/SYBR_Green> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/TRI_Reagent> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/Taq_ADN_Polymerase> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_Nilo> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_bromofenol> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_metileno> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/cabina_para_PCR> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/dNTPs> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/micropipetas> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/oligonucleótidos> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/rojo_de_fenol> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/termoincubadora> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/tips_de_plastico> ,
+                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Labconco
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Labconco> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotec/cabina_para_PCR> ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Merck
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Merck> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/TRI_Reagent> ,
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_Nilo> ,
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_bromofenol> ,
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_metileno> ,
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/rojo_de_fenol> ,
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Mic_qPCR_Thermal_Cycler
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Mic_qPCR_Thermal_Cycler> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR> ;
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> <http://www.co-ode.org/ontologies/ont.owl/biotec/Biodynamics> ;
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotec/date_price> "2023-06-19" ;
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotec/descriptionInput> """Ciclador Real Time rápido, preciso y compacto con 4 canales (verde, amarillo, naranja y rojo).
+48 muestras, USB y Bluetooth.
+Fast cycling.
+Bio Molecular Systems.""" ;
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotec/moneda> "u$s" ;
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotec/value_price> "23094.5"^^xsd:float ;
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotec/webSource> "https://www.biodynamics.com.ar/product-page/mic-qpcr-thermal-cycler-4-channels"^^xsd:anyURI .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Mic_qPCR_Thermal_Cycler_-_2_channels
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Mic_qPCR_Thermal_Cycler_-_2_channels> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR> ;
+                                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> <http://www.co-ode.org/ontologies/ont.owl/biotec/Biodynamics> ;
+                                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotec/date_price> "2023-06-19" ;
+                                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotec/descriptionInput> """Ciclador Real Time rápido, preciso y compacto con 2 canales (verde y amarillo).
+48 muestras, USB y Bluetooth.
+Fast cycling.
+Bio Molecular Systems.""" ;
+                                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotec/moneda> "u$s" ;
+                                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotec/value_price> "19779.5"^^xsd:float ;
+                                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotec/webSource> "https://www.biodynamics.com.ar/product-page/mic-qpcr-thermal-cycler-2-channels"^^xsd:anyURI .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Muufri_Biotech
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Muufri_Biotech> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> ;
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/nameBusiness> "Muufri Biotech Co." ;
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/nameProvince> "CA" ,
+                                                                                                                                "EEUU" ;
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/webSource> "https://perfectday.com/"^^xsd:anyURI ;
+                                                                 <http://www.co-ode.org/ontologies/ont.owl/biotec/yearCreation> "2014"^^xsd:int .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/New_England_Biolabs
+<http://www.co-ode.org/ontologies/ont.owl/biotec/New_England_Biolabs> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.co-ode.org/ontologies/ont.owl/biotec/Bst_DNA_Polymerase> ,
+                                                                               <http://www.co-ode.org/ontologies/ont.owl/biotec/M-MLV_Reverse_Transcriptase> ,
+                                                                               <http://www.co-ode.org/ontologies/ont.owl/biotec/Recombinase_Polymerase_Amplification_-_RPA> ,
+                                                                               <http://www.co-ode.org/ontologies/ont.owl/biotec/Taq_ADN_Polymerase> ,
+                                                                               <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Oncoliq
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Oncoliq> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Prodalam
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Prodalam> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotec/magnesio> ,
+                                                                    <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Promega
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Promega> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotec/Bst_DNA_Polymerase> ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotec/M-MLV_Reverse_Transcriptase> ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotec/Recombinase_Polymerase_Amplification_-_RPA> ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotec/SYBR_Green> ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotec/Taq_ADN_Polymerase> ,
+                                                                   <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Qiagen
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Qiagen> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.co-ode.org/ontologies/ont.owl/biotec/TRI_Reagent> ,
+                                                                  <http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR> ,
+                                                                  <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/RICHIE_Laboratory_Supplies
+<http://www.co-ode.org/ontologies/ont.owl/biotec/RICHIE_Laboratory_Supplies> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.co-ode.org/ontologies/ont.owl/biotec/tips_de_plastico> ,
+                                                                                      <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Sartorius
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Sartorius> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/micropipetas> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/termoincubadora> ,
+                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Thermo_Fischer_Scientific
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Thermo_Fischer_Scientific> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/Bst_DNA_Polymerase> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/M-MLV_Reverse_Transcriptase> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/Recombinase_Polymerase_Amplification_-_RPA> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/SYBR_Green> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/TRI_Reagent> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/Taq_ADN_Polymerase> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_Nilo> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_bromofenol> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/azul_de_metileno> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/cabina_para_PCR> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/micropipetas> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/rojo_de_fenol> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/termoincubadora> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotec/tips_de_plastico> ,
+                                                                                     <http://www.co-ode.org/ontologies/ont.owl/biotechMarket/Empresas> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/kit_Oncoliq
+<http://www.co-ode.org/ontologies/ont.owl/biotec/kit_Oncoliq> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.co-ode.org/ontologies/ont.owl/biotec/kit_diagnostico> ;
+                                                              <http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> <http://www.co-ode.org/ontologies/ont.owl/biotec/Oncoliq> ;
+                                                              <http://www.co-ode.org/ontologies/ont.owl/biotec/hasSupplier> <http://www.co-ode.org/ontologies/ont.owl/biotec/Biodynamics> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl/biotec/Mic_qPCR_Thermal_Cycler_+_HRM
+<http://www.co-ode.org/ontologies/ont.owl/biotec/Mic_qPCR_Thermal_Cycler_+_HRM> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.co-ode.org/ontologies/ont.owl/biotec/real_time_PCR> ;
+                                                                                <http://www.co-ode.org/ontologies/ont.owl/biotec/hasProduces> <http://www.co-ode.org/ontologies/ont.owl/biotec/Biodynamics> ;
+                                                                                <http://www.co-ode.org/ontologies/ont.owl/biotec/date_price> "2023-06-19" ;
+                                                                                <http://www.co-ode.org/ontologies/ont.owl/biotec/descriptionInput> """Ciclador Real Time rápido, preciso y compacto con 4 canales (verde, amarillo, naranja y rojo).
+48 muestras, USB y Bluetooth.
+Fast cycling.
+HRM (High Resolution Melting).
+Bio Molecular Systems.""" ;
+                                                                                <http://www.co-ode.org/ontologies/ont.owl/biotec/moneda> "u$s" ;
+                                                                                <http://www.co-ode.org/ontologies/ont.owl/biotec/value_price> "26409.5"^^xsd:float ;
+                                                                                <http://www.co-ode.org/ontologies/ont.owl/biotec/webSource> "https://www.biodynamics.com.ar/product-page/mic-qpcr-thermal-cycler-4-channels-hrm"^^xsd:anyURI .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi
