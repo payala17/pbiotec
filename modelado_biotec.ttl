@@ -1,0 +1,392 @@
+@prefix : <http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix untitled-ontology-14: <http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#> .
+@base <http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14/> .
+
+<http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#seCultivaen
+untitled-ontology-14:seCultivaen rdf:type owl:ObjectProperty ,
+                                          owl:AsymmetricProperty ;
+                                 rdfs:domain untitled-ontology-14:LineaCelular ;
+                                 rdfs:range untitled-ontology-14:MediodeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#seMantieneen
+untitled-ontology-14:seMantieneen rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                  rdf:type owl:AsymmetricProperty ;
+                                  rdfs:domain untitled-ontology-14:LineaCelular ;
+                                  rdfs:range untitled-ontology-14:EstufadeCultivo .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneAtmósfera
+untitled-ontology-14:tieneAtmósfera rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain untitled-ontology-14:EstufadeCultivo ;
+                                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneCódigo
+untitled-ontology-14:tieneCódigo rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain untitled-ontology-14:ReactivodeMicroscopía ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneEnfermedad
+untitled-ontology-14:tieneEnfermedad rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain untitled-ontology-14:LineaCelular ;
+                                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneFunciónAnticuerpo
+untitled-ontology-14:tieneFunciónAnticuerpo rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain untitled-ontology-14:ReactivodeMicroscopía ;
+                                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneModelo
+untitled-ontology-14:tieneModelo rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain owl:Thing ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneModeloEquipamientoCultivo
+untitled-ontology-14:tieneModeloEquipamientoCultivo rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf untitled-ontology-14:tieneModelo ;
+                                                    rdfs:domain untitled-ontology-14:EquipamientodeCultivo ;
+                                                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneNombre
+untitled-ontology-14:tieneNombre rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain owl:Thing ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneNombreAnticuerpo
+untitled-ontology-14:tieneNombreAnticuerpo rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf untitled-ontology-14:tieneNombre ;
+                                           rdfs:domain untitled-ontology-14:ReactivodeMicroscopía ;
+                                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneNombreBuffer
+untitled-ontology-14:tieneNombreBuffer rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf untitled-ontology-14:tieneNombre .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneNombreLineaCelular
+untitled-ontology-14:tieneNombreLineaCelular rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf untitled-ontology-14:tieneNombre ;
+                                             rdfs:domain untitled-ontology-14:LineaCelular ;
+                                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneNombreProveedor
+untitled-ontology-14:tieneNombreProveedor rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf untitled-ontology-14:tieneNombre ;
+                                          rdfs:domain untitled-ontology-14:Proveedores ;
+                                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneOrganismo
+untitled-ontology-14:tieneOrganismo rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain untitled-ontology-14:LineaCelular ;
+                                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#tieneTemperatura
+untitled-ontology-14:tieneTemperatura rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain untitled-ontology-14:EstufadeCultivo ;
+                                      rdfs:range xsd:nonNegativeInteger .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Almacenamiento
+untitled-ontology-14:Almacenamiento rdf:type owl:Class ;
+                                    rdfs:subClassOf untitled-ontology-14:EquipamientodeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Biotecnología
+untitled-ontology-14:Biotecnología rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#ConsumiblesdeCultivo
+untitled-ontology-14:ConsumiblesdeCultivo rdf:type owl:Class ;
+                                          rdfs:subClassOf untitled-ontology-14:InsumodeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#ConsumiblesdeMicroscopía
+untitled-ontology-14:ConsumiblesdeMicroscopía rdf:type owl:Class ;
+                                              rdfs:subClassOf untitled-ontology-14:InsumodeMicroscopía .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#CultivoCelular
+untitled-ontology-14:CultivoCelular rdf:type owl:Class ;
+                                    rdfs:subClassOf untitled-ontology-14:Biotecnología .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#CélulasCultivadas
+untitled-ontology-14:CélulasCultivadas rdf:type owl:Class ;
+                                       rdfs:subClassOf untitled-ontology-14:InsumodeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Empresas
+untitled-ontology-14:Empresas rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Equipamiento
+untitled-ontology-14:Equipamiento rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#EquipamientodeCultivo
+untitled-ontology-14:EquipamientodeCultivo rdf:type owl:Class ;
+                                           rdfs:subClassOf untitled-ontology-14:Equipamiento .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#EquipamientodeMicroscopía
+untitled-ontology-14:EquipamientodeMicroscopía rdf:type owl:Class ;
+                                               rdfs:subClassOf untitled-ontology-14:Equipamiento .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#EstufadeCultivo
+untitled-ontology-14:EstufadeCultivo rdf:type owl:Class ;
+                                     rdfs:subClassOf untitled-ontology-14:Mantenimiento .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#FlujoLaminar
+untitled-ontology-14:FlujoLaminar rdf:type owl:Class ;
+                                  rdfs:subClassOf untitled-ontology-14:Mantenimiento .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#InsumodeCultivo
+untitled-ontology-14:InsumodeCultivo rdf:type owl:Class ;
+                                     rdfs:subClassOf untitled-ontology-14:Insumos .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#InsumodeMicroscopía
+untitled-ontology-14:InsumodeMicroscopía rdf:type owl:Class ;
+                                         rdfs:subClassOf untitled-ontology-14:Insumos .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Insumos
+untitled-ontology-14:Insumos rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#LineaCelular
+untitled-ontology-14:LineaCelular rdf:type owl:Class ;
+                                  rdfs:subClassOf untitled-ontology-14:CélulasCultivadas .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Mantenimiento
+untitled-ontology-14:Mantenimiento rdf:type owl:Class ;
+                                   rdfs:subClassOf untitled-ontology-14:EquipamientodeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#MediodeCultivo
+untitled-ontology-14:MediodeCultivo rdf:type owl:Class ;
+                                    rdfs:subClassOf untitled-ontology-14:ConsumiblesdeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Microscopio
+untitled-ontology-14:Microscopio rdf:type owl:Class ;
+                                 rdfs:subClassOf untitled-ontology-14:EquipamientodeMicroscopía .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Proveedores
+untitled-ontology-14:Proveedores rdf:type owl:Class ;
+                                 rdfs:subClassOf untitled-ontology-14:Empresas .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#ReactivodeMicroscopía
+untitled-ontology-14:ReactivodeMicroscopía rdf:type owl:Class ;
+                                           rdfs:subClassOf untitled-ontology-14:InsumodeMicroscopía .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#SuplementodeCultivo
+untitled-ontology-14:SuplementodeCultivo rdf:type owl:Class ;
+                                         rdfs:subClassOf untitled-ontology-14:ConsumiblesdeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#TanquedeNitrógeno
+untitled-ontology-14:TanquedeNitrógeno rdf:type owl:Class ;
+                                       rdfs:subClassOf untitled-ontology-14:Almacenamiento .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Ultrafreezer
+untitled-ontology-14:Ultrafreezer rdf:type owl:Class ;
+                                  rdfs:subClassOf untitled-ontology-14:Almacenamiento .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Anticuerpo001
+untitled-ontology-14:Anticuerpo001 rdf:type owl:NamedIndividual ,
+                                            untitled-ontology-14:ReactivodeMicroscopía ;
+                                   untitled-ontology-14:tieneCódigo "AC133" ;
+                                   untitled-ontology-14:tieneNombre "anti-CD133" ;
+                                   untitled-ontology-14:tieneNombreProveedor "Miltenyi Biotec" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Anticuerpo002
+untitled-ontology-14:Anticuerpo002 rdf:type owl:NamedIndividual ,
+                                            untitled-ontology-14:ReactivodeMicroscopía ;
+                                   untitled-ontology-14:tieneCódigo "sc-40" ;
+                                   untitled-ontology-14:tieneNombre "anti-c-Myc" ;
+                                   untitled-ontology-14:tieneNombreProveedor "Santa Cruz Biotechnology" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Anticuerpo003
+untitled-ontology-14:Anticuerpo003 rdf:type owl:NamedIndividual ,
+                                            untitled-ontology-14:ReactivodeMicroscopía ;
+                                   untitled-ontology-14:tieneCódigo "sc:5279" ;
+                                   untitled-ontology-14:tieneNombre "anti-Oct-3/4" ;
+                                   untitled-ontology-14:tieneNombreProveedor "Santa Cruz Biotechnology" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Anticuerpo004
+untitled-ontology-14:Anticuerpo004 rdf:type owl:NamedIndividual ,
+                                            untitled-ontology-14:ReactivodeMicroscopía ;
+                                   untitled-ontology-14:tieneCódigo "sc-293121" ;
+                                   untitled-ontology-14:tieneNombre "anti-Nanog" ;
+                                   untitled-ontology-14:tieneNombreProveedor "Santa Cruz Biotechnology" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Anticuerpo005
+untitled-ontology-14:Anticuerpo005 rdf:type owl:NamedIndividual ,
+                                            untitled-ontology-14:ReactivodeMicroscopía ;
+                                   untitled-ontology-14:tieneNombre "anti-CFTR" ;
+                                   untitled-ontology-14:tieneNombreProveedor "R&D Systems" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Buffer001
+untitled-ontology-14:Buffer001 rdf:type owl:NamedIndividual ,
+                                        untitled-ontology-14:ReactivodeMicroscopía ;
+                               untitled-ontology-14:tieneNombreBuffer "PBS" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Estreptomicina
+untitled-ontology-14:Estreptomicina rdf:type owl:NamedIndividual ,
+                                             untitled-ontology-14:SuplementodeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#EstufadeCultivo001
+untitled-ontology-14:EstufadeCultivo001 rdf:type owl:NamedIndividual ,
+                                                 untitled-ontology-14:EstufadeCultivo ;
+                                        untitled-ontology-14:tieneAtmósfera "5% CO2" ,
+                                                                            "Húmeda" ;
+                                        untitled-ontology-14:tieneTemperatura 37 .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Formaldehido
+untitled-ontology-14:Formaldehido rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-14:ReactivodeMicroscopía .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Glutaraldehido
+untitled-ontology-14:Glutaraldehido rdf:type owl:NamedIndividual ,
+                                             untitled-ontology-14:ReactivodeMicroscopía .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#LC001
+untitled-ontology-14:LC001 rdf:type owl:NamedIndividual ,
+                                    untitled-ontology-14:LineaCelular ;
+                           untitled-ontology-14:seCultivaen untitled-ontology-14:MC001 ;
+                           untitled-ontology-14:seMantieneen untitled-ontology-14:EstufadeCultivo001 ;
+                           untitled-ontology-14:tieneEnfermedad "Carcinoma colorrectal" ;
+                           untitled-ontology-14:tieneNombreLineaCelular "HCT116" ;
+                           untitled-ontology-14:tieneOrganismo "Humano" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#LC002
+untitled-ontology-14:LC002 rdf:type owl:NamedIndividual ,
+                                    untitled-ontology-14:LineaCelular ;
+                           untitled-ontology-14:seCultivaen untitled-ontology-14:MC002 ;
+                           untitled-ontology-14:seMantieneen untitled-ontology-14:EstufadeCultivo001 ;
+                           untitled-ontology-14:tieneEnfermedad "No tumoral, embrionaria de riñon" ;
+                           untitled-ontology-14:tieneNombreLineaCelular "HEK293" ;
+                           untitled-ontology-14:tieneOrganismo "Humano" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#MC001
+untitled-ontology-14:MC001 rdf:type owl:NamedIndividual ,
+                                    untitled-ontology-14:MediodeCultivo ;
+                           untitled-ontology-14:tieneNombre "DMEM/F12" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#MC002
+untitled-ontology-14:MC002 rdf:type owl:NamedIndividual ,
+                                    untitled-ontology-14:MediodeCultivo ;
+                           untitled-ontology-14:tieneNombre "DMEM alta glucosa" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#MicroscopioFluorescencia001
+untitled-ontology-14:MicroscopioFluorescencia001 rdf:type owl:NamedIndividual ,
+                                                          untitled-ontology-14:Microscopio ;
+                                                 untitled-ontology-14:tieneModelo "Olympus BX51" ;
+                                                 untitled-ontology-14:tieneNombreProveedor "Olympus" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Penicilina
+untitled-ontology-14:Penicilina rdf:type owl:NamedIndividual ,
+                                         untitled-ontology-14:SuplementodeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Proveedor001
+untitled-ontology-14:Proveedor001 rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-14:Proveedores ;
+                                  untitled-ontology-14:tieneNombre "Santa Cruz Biotechnology" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Proveedor002
+untitled-ontology-14:Proveedor002 rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-14:Proveedores ;
+                                  untitled-ontology-14:tieneNombre "R&D Systems" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Proveedor003
+untitled-ontology-14:Proveedor003 rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-14:Proveedores ;
+                                  untitled-ontology-14:tieneNombre "Miltenyi Biotec" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Proveedor004
+untitled-ontology-14:Proveedor004 rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-14:Proveedores ;
+                                  untitled-ontology-14:tieneNombre "Olympus" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Proveedor005
+untitled-ontology-14:Proveedor005 rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-14:Proveedores ;
+                                  untitled-ontology-14:tieneNombreProveedor "Gibco Laboratories" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#SFB001
+untitled-ontology-14:SFB001 rdf:type owl:NamedIndividual ,
+                                     untitled-ontology-14:SuplementodeCultivo .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2023/11/untitled-ontology-14#Tritón
+untitled-ontology-14:Tritón rdf:type owl:NamedIndividual ,
+                                     untitled-ontology-14:ConsumiblesdeMicroscopía .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
