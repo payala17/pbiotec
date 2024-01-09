@@ -1026,7 +1026,7 @@ untitled-ontology-14:LC001 rdf:type owl:NamedIndividual ,
                            untitled-ontology-14:elMCseSuplementacon untitled-ontology-14:SFB001 ;
                            untitled-ontology-14:seCultivaen untitled-ontology-14:MC001 ;
                            untitled-ontology-14:seMantieneen untitled-ontology-14:EstufadeCultivo001 ;
-                           untitled-ontology-14:tieneLinaje "[Carcinoma colorrectal,Colorectal_cancer]" ;
+                           untitled-ontology-14:tieneLinaje "[Carcinoma colorrectal,colorectal_cancer]" ;
                            untitled-ontology-14:tieneNombreLineaCelular "HCT116" ;
                            untitled-ontology-14:tieneOrganismo "Humano" .
 
